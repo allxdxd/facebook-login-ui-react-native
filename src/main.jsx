@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Header from './components/header/header.jsx';
-import Inputs from './components/inputs.jsx';
+import Inputs from './components/inputs/inputs.jsx';
 
 function Main() {
   return (
