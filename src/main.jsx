@@ -1,13 +1,15 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import Header from './components/header/header.jsx';
-import Inputs from './components/inputs/inputs.jsx';
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import Header from "./components/header/header.jsx";
+import Inputs from "./components/inputs/inputs.jsx";
+import Footer from "./components/footer/footer.jsx";
 
 function Main() {
   return (
     <View style={styles.container}>
       <Header />
       <Inputs />
+      <Footer />
     </View>
   );
 }
