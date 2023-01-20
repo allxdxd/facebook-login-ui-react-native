@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "fb_v2",
-    "slug": "fb_v2",
+    "slug": "facebook-ui-login",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,6 +28,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0caef1b3-86a1-4e61-9ba8-149564c95caa"
+      }
+    },
+    "owner": "roller"
   }
 }
