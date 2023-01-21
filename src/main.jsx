@@ -1,8 +1,6 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import Header from "./components/header/header.jsx";
-import Inputs from "./components/inputs/inputs.jsx";
-import Footer from "./components/footer/footer.jsx";
+import { Header, Inputs, Footer } from "./components/indexComponents.js";
 
 function Main() {
   return (
