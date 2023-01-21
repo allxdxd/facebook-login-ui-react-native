@@ -1,12 +1,17 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  separator: {
-    alignSelf: 'center',
+  separator1: {
+    backgroundColor: "#A7A8AB",
+    height: 1,
+    flex: 1,
+    alignSelf: "center"
+  },
+  separator2:{
+    alignSelf: "center",
     paddingHorizontal: 5,
     fontSize: 15,
-    color: '#A7A8AB',
-    background: "#fff",
+    color: "#A7A8AB"
   },
   create: {
     background: '#fff',

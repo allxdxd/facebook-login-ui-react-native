@@ -3,34 +3,11 @@ import styles from "./styles.js";
 
 function Footer() {
   return (
-    <View style={{backgroundColor:"#fff"}}>
+    <View style={{ backgroundColor: "#fff" }}>
       <View style={{ flexDirection: "row", marginHorizontal: 40 }}>
-        <View
-          style={{
-            backgroundColor: "#A7A8AB",
-            height: 1,
-            flex: 1,
-            alignSelf: "center"
-          }}
-        />
-        <Text
-          style={{
-            alignSelf: "center",
-            paddingHorizontal: 5,
-            fontSize: 15,
-            color: "#A7A8AB"
-          }}
-        >
-          O
-        </Text>
-        <View
-          style={{
-            backgroundColor: "#A7A8AB",
-            height: 1,
-            flex: 1,
-            alignSelf: "center"
-          }}
-        />
+        <View style={styles.separator1} />
+        <Text style={styles.separator2}>O</Text>
+        <View style={styles.separator1} />
       </View>
 
       <View style={styles.create}>
