@@ -3,7 +3,7 @@ import styles from "./styles.js";
 
 function Footer() {
   return (
-    <View style={{ backgroundColor: "#fff" }}>
+    <View>
 
       <View style={{ marginTop: 30, marginBottom: 30 }}>
         <Text style={styles.textforged}>
