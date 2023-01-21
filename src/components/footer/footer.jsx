@@ -3,7 +3,7 @@ import styles from "./styles.js";
 
 function Footer() {
   return (
-    <View>
+    <View style={{backgroundColor:"#fff"}}>
       <View style={{ flexDirection: "row", marginHorizontal: 40 }}>
         <View
           style={{
