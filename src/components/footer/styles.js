@@ -30,6 +30,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 8.5,
     fontSize: 15
+  },
+  textforged: {
+    color: "#5397E8",
+    textAlign: "center",
+    fontSize: 15
   }
 });
 
