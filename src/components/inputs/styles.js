@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
   username: {
@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#A7A8AB',
     marginTop: 50,
-    marginHorizontal: 40,
+    marginHorizontal: 40
   },
   username2: {
     color: '#A7A8AB',
@@ -17,13 +17,13 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#A7A8AB',
     marginTop: 25,
-    marginHorizontal: 40,
+    marginHorizontal: 40
   },
   login: {
     marginTop: 20,
     padding: 0,
-    marginHorizontal: 40,
-  },
-});
+    marginHorizontal: 40
+  }
+})
 
-export default styles;
+export default styles

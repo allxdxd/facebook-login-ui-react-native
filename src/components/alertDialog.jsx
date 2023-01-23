@@ -7,7 +7,7 @@ const createAlert = (title,msg,btn) =>
     [
       {
         text: btn,
-        onPress: () => console.log("Cancel Pressed"),
+        onPress: () => console.log(`"${title}" button has been pressed`),
         style: "cancel"
       }
     ]

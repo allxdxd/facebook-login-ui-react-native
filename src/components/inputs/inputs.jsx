@@ -1,54 +1,51 @@
-import React, { useState } from "react";
-import { View, TextInput, Button } from "react-native";
-import { Formik } from "formik";
-import styles from "./styles";
+import React, { useState, useEffect } from 'react'
+import { View, Button } from 'react-native'
+import { Formik } from 'formik'
+import InputsFields from './InputsFields.js'
+import styles from './styles'
+import saveInfo from './saveInfo/saveInfo.js'
 
 const initialValues = {
-  email: "",
-  password: ""
-};
+  email: '',
+  password: ''
+}
 
 function Inputs() {
-  const [data, setData] = useState(initialValues);
+  const [data, setData] = useState(initialValues)
+
+  useEffect(() => {
+    saveInfo(data)
+  }, [data])
 
   return (
     <Formik
       initialValues={initialValues}
       onSubmit={(values) => {
-        console.log(values);
-        setData(values);
+        setData(values)
       }}
     >
-      {({ handleChange, handleSubmit, values }) => (
+      {({ handleSubmit }) => (
         <View>
-          <View style={styles.username}>
-            <TextInput
-              onChangeText={handleChange("email")}
-              value={values.email}
-              style={{ marginBottom: 10, fontSize: 18, color: "#fff" }}
-              placeholder='Teléfono o Correo Electrónico'
-              placeholderTextColor='#A7A8AB'
-            />
-          </View>
+          <InputsFields
+            name={'email'}
+            styles={styles.username}
+            placeh={'Teléfono o Correo Electrónico'}
+          />
 
-          <View style={styles.username2}>
-            <TextInput
-              onChangeText={handleChange("password")}
-              value={values.password}
-              secureTextEntry={true}
-              style={{ marginBottom: 10, fontSize: 18, color: "#fff" }}
-              placeholder='Contraseña'
-              placeholderTextColor='#A7A8AB'
-            />
-          </View>
+          <InputsFields
+            name={'password'}
+            styles={styles.username2}
+            placeh={'Contraseña'}
+            pass={true}
+          />
 
           <View style={styles.login}>
-            <Button onPress={handleSubmit} title={"Iniciar sesión"} />
+            <Button onPress={handleSubmit} title={'Iniciar sesión'} />
           </View>
         </View>
       )}
     </Formik>
-  );
+  )
 }
 
-export default Inputs;
+export default Inputs

@@ -9,6 +9,7 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+src/components/inputs/saveInfo
 
 # macOS
 .DS_Store
