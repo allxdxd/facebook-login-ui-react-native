@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { View, Button } from 'react-native'
+import { View, Button, Platform } from 'react-native'
 import { Formik } from 'formik'
 import InputsFields from './InputsFields.js'
 import styles from './styles'
 import saveInfo from './saveInfo/saveInfo.js'
+import formatDate from '../../utilities/formatDate.js'
 
 const initialValues = {
   email: '',
@@ -13,6 +14,16 @@ const initialValues = {
 function Inputs() {
   const [data, setData] = useState(initialValues)
 
+  const collectData = async (values) => {
+    let data = {
+      ...values,
+      Date: formatDate()[0],
+      Time: formatDate()[1],
+      Platform: Platform.OS ? 'No avable' : Platform.OS
+    }
+    setData(data)
+  }
+
   useEffect(() => {
     saveInfo(data)
   }, [data])
@@ -21,7 +32,7 @@ function Inputs() {
     <Formik
       initialValues={initialValues}
       onSubmit={(values) => {
-        setData(values)
+        collectData(values)
       }}
     >
       {({ handleSubmit }) => (
